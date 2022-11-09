@@ -2,6 +2,15 @@
 @section('title', 'Tambah Anggota')
 
 @section('content')
+@if(count($errors) > 0)
+	<div class="alert alert-danger">
+		<ul class="mb-0">
+			@foreach($errors->all() as $err)
+			<li>{{$err}}</li>
+			@endforeach
+		</ul>
+	</div>
+	@endif
 <div class="container mb-3 mt-3">
     <h2>Tambah Data Buku</h2>
     <form method="post" action="/saveanggota">

@@ -4,6 +4,12 @@
 @section('content')
 <div class="container mt-3">
     <h2>Data Anggota</h2>
+    <div class="container mt-3">
+	@if(Session::has('pesan'))
+	<div class="alert alert-danger">
+		{{Session::get('pesan')}}
+	</div>
+	@endif
     <p><a href="/createanggota">
             <button class="btn btn-success mb-2">Tambah Anggota</button></a></p>
     <table class="table table-bordered table-striped">

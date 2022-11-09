@@ -19,6 +19,9 @@
         <a class="nav-link active" href="/anggota">Data Anggota</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link active" href="/perpustakawan">Data Perpustakawan</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link active" href="/peminjaman">Data Peminjaman</a>
       </li>
      </ul>
