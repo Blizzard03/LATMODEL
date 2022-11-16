@@ -8,11 +8,17 @@
         @csrf
         <div class="mb-3 mt-3">
             <label for="NPM" class="form-label">NPM :</label>
-            <input type="text" class="form-control" id="NPM" name="judul" value="{{$Anggota->NPM}}">
+            <input type="text" class="form-control @error('NPM') is-invalid @enderror" id="NPM" name="judul" value="{{$Anggota->NPM}}">
+            @error('NPM')
+			<div class="text-danger">{{$message}}</div>
+        @enderror		
         </div>
         <div class="mb-3 mt-3">
             <label for="Nama_Anggota" class="form-label">Nama Anggota :</label>
-            <input type="text" class="form-control" id="Nama_Anggota" name="Nama_Anggota" value="{{$Anggota->Nama}}">
+            <input type="text" class="form-control  @error('Nama_Anggota') is-invalid @enderror" id="Nama_Anggota" name="Nama_Anggota" value="{{$Anggota->Nama}}">
+            @error('Nama_Anggota')
+			<div class="text-danger">{{$message}}</div>
+        @enderror	
         </div>
         <div class="mb-3 mt-3">
             <label for="radio1" class="form-label">Kode Gender :</label>
@@ -27,7 +33,10 @@
         </div>
         <div class="mb-3 mt-3">
             <label for="Alamat" class="form-label">Alamat:</label>
-            <input type="text" class="form-control" id="Alamat" name="Alamat" value="{{$Anggota->Alamat}}">
+            <input type="text" class="form-control @error('Alamat') is-invalid @enderror" id="Alamat" name="Alamat" value="{{$Anggota->Alamat}}">
+            @error('Alamat')
+			<div class="text-danger">{{$message}}</div>
+        @enderror
         </div>
         <div class="mb-3 mt-3">
             <button class="btn btn-success mb-2" type="submit">Simpan</button>

@@ -16,25 +16,25 @@
 	<form method="post" action="/savebuku">
 	@csrf
 	  <div class="mb-3 mt-3">
-		<label for="judul" class="form-label">Judul Buku :</label>
-		<input type="text" class="form-control @error('judul') is-invalid @enderror" 
-		       id="judul" name="judul" value="{{old('judul')}}">
-		@error('judul')
+		<label for="Judul" class="form-label">Judul Buku :</label>
+		<input type="text" class="form-control @error('Judul') is-invalid @enderror" 
+		       id="Judul" name="Judul" value="{{old('Judul')}}">
+		@error('Judul')
 			<div class="text-danger">{{$message}}</div>
         @enderror		
 	  </div>  
 	  <div class="mb-3 mt-3">
-		<label for="penulis" class="form-label">Penulis :</label>
-		<input type="text" class="form-control @error('penulis') is-invalid @enderror" 
-		       id="penulis" name="penulis" value="{{old('penulis')}}">
+		<label for="Penulis" class="form-label">Penulis :</label>
+		<input type="text" class="form-control @error('Penulis') is-invalid @enderror" 
+		       id="Penulis" name="Penulis" value="{{old('Penulis')}}">
 	  	@error('penulis')
 			<div class="text-danger">{{$message}}</div>
         @enderror		
 	  </div>  
 	  <div class="mb-3 mt-3">
 		<label for="penerbit" class="form-label">Penerbit :</label>
-		<input type="text" class="form-control @error('penerbit') is-invalid @enderror" 
-		       id="Penerbit" name="penerbit" value="{{old('penerbit')}}">		
+		<input type="text" class="form-control @error('Penerbit') is-invalid @enderror" 
+		       id="Penerbit" name="Penerbit" value="{{old('Penerbit')}}">		
 		@error('penerbit')
 			<div class="text-danger">{{$message}}</div>
         @enderror			      
@@ -53,8 +53,9 @@
  	  <div class="mb-3 mt-3">
 		<label for="harga" class="form-label">Harga Buku:</label>
 		<input type="text" class="form-control @error('harga') is-invalid @enderror" 
-		       id="harga" name="harga" value="{{old('hargabuku')}}">		
+		       id="harga" name="harga" value="{{'Rp'.' ' .number_format(old('hargabuku'),2,',','.');}}">		
 	  	@error('harga')
+		  ""
 			<div class="text-danger">{{$message}}</div>
         @enderror	
      </div>		
