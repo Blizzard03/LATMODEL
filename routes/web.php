@@ -14,10 +14,10 @@ use App\Http\Controllers\ModelController;
 */
 
 // Route display buku (READ)
-Route::get('/buku', [ModelController::class,'buku']);
+Route::get('/buku/{locale?}', [ModelController::class,'buku']);
 
 // Route form input & insert new buku (CREATE)
-Route::get('/createbuku', [ModelController::class,'createbuku']);
+Route::get('/createbuku/{locale?}', [ModelController::class,'createbuku']);
 Route::post('/savebuku', [ModelController::class,'savebuku']);
 
 // Route remove buku (DELETE)
@@ -31,10 +31,10 @@ Route::post('/updatebuku/{id}',[ModelController::class,'updatebuku'])
     ->name('modifbuku');
 
 // Route display Anggota (READ)
-Route::get('/anggota', [ModelController::class,'anggota']);
+Route::get('/anggota/{locale?}', [ModelController::class,'anggota']);
 
 // Route form input & insert new Anggota (CREATE)
-Route::get('/createanggota', [ModelController::class,'createanggota']);
+Route::get('/createanggota/{locale?}', [ModelController::class,'createanggota']);
 Route::post('/saveanggota', [ModelController::class,'saveanggota']);
 
 // Route remove Anggota (DELETE)
@@ -48,10 +48,10 @@ Route::post('/updateanggota/{id}', [ModelController::class,'updateanggota'])
     ->name('modifanggota');
 
 // Route display Perpustakawan (READ)
-Route::get('/perpustakawan', [ModelController::class,'perpustakawan']);
+Route::get('/perpustakawan/{locale?}', [ModelController::class,'perpustakawan']);
 
 // Route form input & insert new Perpustakawan  (CREATE)
-Route::get('/createperpustakawan', [ModelController::class,'createperpustakawan']);
+Route::get('/createperpustakawan/{locale?}', [ModelController::class,'createperpustakawan']);
 Route::post('/saveperpustakawan', [ModelController::class,'saveperpustakawan']);
 
 // Route remove Perpustakawan (DELETE)
