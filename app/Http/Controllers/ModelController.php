@@ -289,6 +289,16 @@ berhasil diubah');
         GROUP BY  P.Anggota_ID' );
         return view('lap4', compact('data_rekap_anggota'));
 }
+ 
+//Laporan Rekap Rata-Rata Harga Buku Tiap Penerbit
+    public function Lap5()
+    {
+        $data_rekap_harga_buku = DB::select(
+            'SELECT Penerbit Penerbit_Buku, avg(hargabuku) as Jumlah_Harga_Buku
+                                FROM table_buku 
+                                GROUP BY  Penerbit');
+        return view('lap5', compact('data_rekap_harga_buku'));
+}
 
 
   //Laporan Rekap Buku Perjudul

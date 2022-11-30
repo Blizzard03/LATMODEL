@@ -76,9 +76,8 @@ Route::get('/lap3', [ModelController::class,'Lap3']);
 //Route Display Rekap Peranggota(Read)
 Route::get('/lap4', [ModelController::class,'Lap4']);
 
-
-
-
+//Route Display Rekap Rata-Rata Harga Buku Tiap Penerbit(Read)
+Route::get('/lap5', [ModelController::class,'Lap5']);
 
 //Route Display Rekap Jumlah Buku Tiap Penulis(Read)
 Route::get('/lap6', [ModelController::class,'Lap6']);
