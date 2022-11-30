@@ -10,21 +10,27 @@
 
 <body>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <div class="container-fluid">
+<div class="container-fluid">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link active" href="/buku">Data Buku</a>
+        <a class="nav-link active" href="/buku"><?php echo e(__('navbar.title1')); ?></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="/anggota">Data Anggota</a>
+        <a class="nav-link active" href="/anggota"><?php echo e(__('navbar.title2')); ?></a>
+	  </li>	
+      <li class="nav-item">
+        <a class="nav-link active" href="/perpustakawan"><?php echo e(__('navbar.title3')); ?></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="/perpustakawan">Data Perpustakawan</a>
-      </li>
+        <a class="nav-link active" href="/lap1"><?php echo e(__('navbar.title4')); ?></a>
+      </li>	
       <li class="nav-item">
-        <a class="nav-link active" href="/peminjaman">Data Peminjaman</a>
-      </li>
-     </ul>
+        <a class="nav-link active" href="/lap2"><?php echo e(__('navbar.title5')); ?></a>
+      </li>			
+      <li class="nav-item">
+        <a class="nav-link active" href="/lap3"><?php echo e(__('navbar.title6')); ?></a>
+      </li>				  
+    </ul>
   </div>
 </nav>
 
@@ -32,8 +38,9 @@
 
 <footer class="bg-dark py-4 text-white mt-4"> 
    <div class="container text-center"> 
-      <small class="text-center"> Perpustakaan Universitas Juanda 
-	  <BR> Jl. Dago 96 Bandung Jawa Barat</small> 
+      <small class="text-center"> <?php echo e(__('navbar.footer1')); ?>
+
+	  <BR> <?php echo e(__('navbar.footer2')); ?></small> 
    </div> 
 </footer>
 </body>

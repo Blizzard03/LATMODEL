@@ -1,4 +1,3 @@
-
 <?php $__env->startSection('title', 'Data Anggota'); ?>
 
 <?php $__env->startSection('content'); ?>

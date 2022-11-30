@@ -1,4 +1,3 @@
-
 <?php $__env->startSection('title', 'Data Buku'); ?>
 
 <?php $__env->startSection('content'); ?>
