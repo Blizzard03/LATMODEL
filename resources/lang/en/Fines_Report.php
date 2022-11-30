@@ -11,7 +11,7 @@ return
         'Penulis'=>'Writer',
         'Lama_Pinjam'=>'Borrowing time',
         'Keterlambatan'=>'Lateness',
-        'Denda'=>'Loans'
+        'Denda'=>'Loans',
 ]
 ]
 

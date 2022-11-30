@@ -73,4 +73,14 @@ Route::get('/lap2/{locale?}', [ModelController::class,'Lap2']);
 //Route Display Rekap Perjudul(Read)
 Route::get('/lap3', [ModelController::class,'Lap3']);
 
+//Route Display Rekap Peranggota(Read)
+Route::get('/lap4', [ModelController::class,'Lap4']);
+
+
+
+
+
+//Route Display Rekap Jumlah Buku Tiap Penulis(Read)
+Route::get('/lap6', [ModelController::class,'Lap6']);
+
 ?>

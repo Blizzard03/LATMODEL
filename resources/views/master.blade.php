@@ -12,24 +12,30 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 <div class="container-fluid">
     <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link active" href="/buku">{{ __('navbar.title1')}}</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="/anggota">{{ __('navbar.title2')}}</a>
-	  </li>	
-      <li class="nav-item">
-        <a class="nav-link active" href="/perpustakawan">{{ __('navbar.title3')}}</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="/lap1">{{ __('navbar.title4')}}</a>
-      </li>	
-      <li class="nav-item">
-        <a class="nav-link active" href="/lap2">{{ __('navbar.title5')}}</a>
-      </li>			
-      <li class="nav-item">
-        <a class="nav-link active" href="/lap3">{{ __('navbar.title6')}}</a>
-      </li>				  
+		<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Data</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/buku">{{ __('navbar.title1')}}</a></li>
+            <li><a class="dropdown-item" href="/anggota">{{ __('navbar.title2')}}</a></li>
+            <li><a class="dropdown-item" href="/pustakawan">{{ __('navbar.title3')}}</a></li>
+          </ul>
+        </li>	
+		<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Laporan</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/lap1">{{ __('navbar.title4')}}</a></li>
+            <li><a class="dropdown-item" href="/lap2">{{ __('navbar.title5')}}</a></li>
+          </ul>
+        </li>		
+		<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Rekapitulasi</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/lap3">{{ __('navbar.title6')}}</a></li>
+            <li><a class="dropdown-item" href="/lap4">Rekap Peminjaman Per-Anggota</a></li>
+            <li><a class="dropdown-item" href="/lap5">Rekap Rata-rata Harga Buku Tiap Penerbit</a></li>
+            <li><a class="dropdown-item" href="/lap6">Rekap Jumlah Buku Tiap Penulis</a></li>			
+          </ul>
+        </li>			  
     </ul>
   </div>
 </nav>

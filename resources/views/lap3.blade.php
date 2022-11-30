@@ -16,7 +16,7 @@
         </thead>
 
         <tbody>
-            @foreach ($data_rekap as $report3)
+            @foreach ($data_rekap_buku as $report3)
             <tr>
                 <td style="text-align:center">{{$report3->Judul_Buku}}</td>
                 <td style="text-align:center">{{$report3->Penulis_Buku}}</td>

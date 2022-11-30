@@ -253,30 +253,53 @@ berhasil diubah');
 }
 
     //Laporan Denda
-    public function Lap2()
+    public function Lap2($locale='id')
         
-        {
+        {App::setLocale($locale);
          $data_denda = DB::SELECT('SELECT D.id IDPeminjam,A.Nama Nama_Anggota, A.Alamat Alamat_Anggota,
          B.Judul Judul_Buku,B.Penulis, P.Lama Lama_Pinjam, D.Keterlabatan
          FROM table_anggota A
          JOIN table_denda D ON (D.Anggota_ID=A.id)
          JOIN table_peminjaman P ON(P.id=D.Pinjam_ID)
          JOIN table_buku B ON (B.id=P.Buku_id)');
-        return view('lap2', compact('data_denda'));
+        return view('lap2', compact('data_denda'),["locale" => $locale]);
 
 }
 
     //Laporan Rekap Buku Perjudul
     public function Lap3()
     {
-        $data_rekap = DB::select(
+        $data_rekap_buku = DB::select(
             'SELECT
         B.Judul Judul_Buku,  B.Penulis Penulis_Buku, B.Penerbit Penerbit_Buku, count(*) as Jumlah_Pinjam
         FROM table_peminjaman P
-        JOIN table_buku B ON (B.id=P.Buku_id)
+        JOIN table_buku B ON (B.id=P.Buku_ID)
         GROUP BY  P.buku_id' );
-        return view('lap3', compact('data_rekap'));
-}
+        return view('lap3', compact('data_rekap_buku'));
 }
 
+    //Laporan Rekap Peminjaman Per Anggota
+    public function Lap4()
+    {
+        $data_rekap_anggota = DB::select(
+            'SELECT
+        A.NPM nomor_id,  A.Nama Nama_Anggota, A.Alamat Alamat_Anggota, count(*) as Jumlah_Meminjam
+        FROM table_peminjaman P
+        JOIN table_anggota A ON (A.id=P.Anggota_ID)
+        GROUP BY  P.Anggota_ID' );
+        return view('lap4', compact('data_rekap_anggota'));
+}
+
+
+  //Laporan Rekap Buku Perjudul
+  public function Lap6()
+  {
+      $data_rekap_penulis = DB::select(
+          'SELECT penulis Penulis_Buku, COUNT(*) as Jumlah_Buku
+          FROM table_buku
+          GROUP BY Penulis_Buku'
+          );
+      return view('lap6', compact('data_rekap_penulis'));
+}
+}
 
